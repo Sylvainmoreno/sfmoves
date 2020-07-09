@@ -3,10 +3,17 @@ import { Image, Text, View, StyleSheet, ScrollView } from 'react-native';
 import Swiper from 'react-native-swiper';
 import Constants from 'expo-constants';
 import ryu from '../assets/ryu.gif';
+import ryuback from '../assets/Ryubackground.png';
 import ken from '../assets/ken.gif';
 import chun from '../assets/chun.gif';
 import left from '../assets/left.webp';
 import right from '../assets/right.png';
+import down from '../assets/down.webp';
+import up from '../assets/up.webp';
+import diagright from '../assets/diagright.webp'
+import holdb from '../assets/Holdb.webp';
+import holddu from '../assets/holddu.webp';
+import rl from '../assets/rl.png'
 import hado from '../assets/hado.webp';
 import hado2 from '../assets/hado2.webp';
 import rhado from '../assets/rhado.png';
@@ -14,6 +21,7 @@ import demihado from '../assets/demihado.png';
 import demi from '../assets/demi.webp';
 import shoryu from '../assets/shoryu.webp';
 import air from '../assets/air.webp';
+import tap from '../assets/tap.webp';
 import lp from '../assets/lp.webp';
 import mp from '../assets/mp.webp';
 import hp from '../assets/hp.webp';
@@ -46,7 +54,7 @@ class Charassfx extends React.Component {
         return (
             <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
                 <Swiper showsPagination={false} onIndexChanged={(index) => this.setCurrentSlide(index)}>
-
+                    
                     <View style={styles.container}>
                         <Text style={styles.text}>RYU</Text>
                         <Image source={ryu} style={styles.image} />
@@ -328,9 +336,137 @@ class Charassfx extends React.Component {
                         </View>
                     </View>
 
-                    <View>
-                        <Text>CHUN</Text>
-                        <Image source={chun} />
+                    <View style={styles.container}>
+                        <Text style={styles.text}>CHUN-LI</Text>
+                        <Image source={chun} style={styles.image} />
+                        <View style={{ flex: 2, flexDirection: 'column', marginTop: 40, width: '98%' }}>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Koshû Tô</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={left} />
+                                    <Text>or</Text>
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={mp} />
+                                    <Text>or</Text>
+                                    <Image source={hp} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Ryûsei Raku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={air} />
+                                    <Image source={left} />
+                                    <Text>or</Text>
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={mp} />
+                                    <Text>or</Text>
+                                    <Image source={hp} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Kôhô Kaiten Kyaku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={diagright} />
+                                    <Text>+</Text>
+                                    <Image source={mk} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Kaku Kyaku Raku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={diagright} />
+                                    <Text>+</Text>
+                                    <Image source={hk} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Yôsô Kyaku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={air} />
+                                    <Image source={down} />
+                                    <Text>+</Text>
+                                    <Image source={mk} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Kikôken</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={holdb} />
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={ap} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Spinning Bird Kick</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={holdb} />
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={ak} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Kûchû Spinning Bird Kick</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={air} />
+                                    <Image source={holdb} />
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={ak} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Tenshô Kyaku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={holddu} />
+                                    <Text>+</Text>
+                                    <Image source={ak} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Hyakuretsu Kyaku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={tap} />
+                                    <Text>+</Text>
+                                    <Image source={ak} />
+                                </View>
+                            </View>
+                            <View style={{ flexDirection: 'row' }}>
+                                <View style={styles.board}>
+                                    <Text>Senretsu Kyaku</Text>
+                                </View>
+                                <View style={styles.board}>
+                                    <Image source={holdb} />
+                                    <Image source={rl} />
+                                    <Image source={right} />
+                                    <Text>+</Text>
+                                    <Image source={ak} />
+                                </View>
+                            </View>
+                        </View>
                     </View>
 
                 </Swiper>
@@ -361,16 +497,18 @@ const styles = StyleSheet.create({
     text: {
         flex: 1,
         marginTop: 50,
-        marginBottom: -75
+        marginBottom: -75,
+        fontSize: 30,
+        fontWeight: "bold"
     },
     image: {
         flex: 1,
         height: 50,
-        width: 100,
+        width: 100
     },
-    // scrollView: {
-    //     height: 500
-    // }
+    scrollView: {
+        
+    }
 })
 
 
