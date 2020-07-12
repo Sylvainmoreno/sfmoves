@@ -5,7 +5,7 @@ import Charassfx from './components/charassfx'
  
 
 const navigator = createStackNavigator({
-  Main: Main,
+  'Main Menu': Main,
   Charassfx: Charassfx
 })
 
